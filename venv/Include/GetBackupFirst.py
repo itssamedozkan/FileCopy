@@ -12,8 +12,9 @@ for i in fileNames:
     counter += 1
 f.close()
 
+if __name__ == '__main__':
 
-db = shelve.open('backup.db')
-for key in sorted(db):  # Iterate to display database objects
-    print(key, '\t=>', db[key])
-db.close()
+    db = shelve.open('backup.db')
+    for key in db:  # Iterate to display database objects
+        print(key, '\t=>', db[key])
+    db.close()

@@ -10,7 +10,7 @@ fileNames = os.listdir(path)
 
 
 db = shelve.open('backup.db')
-for key in sorted(db):  # Iterate to display database objects
+for key in db:  # Iterate to display database objects
     if fileNames.__contains__(db[key])  == False:
         print(db[key] + " adlı Dosya Ana Dosyadan Silinmiştir.")
         try :

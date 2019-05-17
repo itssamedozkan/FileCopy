@@ -11,7 +11,7 @@ fileNames = os.listdir(path)
 for files in fileNames:
     f = shelve.open('backup.db')
     islem = False
-    for key in sorted(f):  # Iterate to display database objects
+    for key in f:  # Iterate to display database objects
         if f[key] == files:
             islem = True
             break
